@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fantasy Clicker RPG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game">
+
+  <header id="topbar">
+    <h1>⚔️ Fantasy Clicker RPG</h1>
+    <div id="resources">
+      <span>💰 Aur: <b id="goldDisplay">0</b></span>
+      <span>⭐ Nivel: <b id="levelDisplay">1</b></span>
+      <span>✨ XP: <b id="xpDisplay">0</b> / <b id="xpMaxDisplay">100</b></span>
+      <span>🔁 Prestige: <b id="prestigeDisplay">0</b></span>
+    </div>
+  </header>
+
+  <nav id="tabs">
+    <button class="tab-btn active" data-tab="combat">Luptă</button>
+    <button class="tab-btn" data-tab="character">Personaj</button>
+    <button class="tab-btn" data-tab="inventory">Inventar</button>
+    <button class="tab-btn" data-tab="skills">Skill Tree</button>
+    <button class="tab-btn" data-tab="pets">Companioni</button>
+    <button class="tab-btn" data-tab="prestige">Prestige</button>
+    <button class="tab-btn" data-tab="zones">Zone</button>
+  </nav>
+
+  <main id="content">
+
+    <!-- COMBAT TAB -->
+    <section id="tab-combat" class="tab-content active">
+      <h2 id="zoneName">Zonă: -</h2>
+
+      <div id="monsterArea">
+        <h3 id="monsterName">-</h3>
+        <div id="monsterSprite">👾</div>
+        <div class="bar">
+          <div id="monsterHpBar" class="bar-fill"></div>
+        </div>
+        <p id="monsterHpText">0 / 0</p>
+        <button id="attackBtn">Atacă!</button>
+      </div>
+
+      <div id="combatLog"></div>
+    </section>
+
+    <!-- CHARACTER TAB -->
+    <section id="tab-character" class="tab-content">
+      <h2>Personaj</h2>
+      <div id="classSelection">
+        <p>Alege o clasă:</p>
+        <button class="class-btn" data-class="warrior">🗡️ Warrior</button>
+        <button class="class-btn" data-class="mage">🔮 Mage</button>
+        <button class="class-btn" data-class="rogue">🏹 Rogue</button>
+      </div>
+      <div id="characterStats"></div>
+    </section>
+
+    <!-- INVENTORY TAB -->
+    <section id="tab-inventory" class="tab-content">
+      <h2>Inventar & Echipament</h2>
+      <div id="equippedSlots"></div>
+      <div id="inventoryGrid"></div>
+    </section>
+
+    <!-- SKILLS TAB -->
+    <section id="tab-skills" class="tab-content">
+      <h2>Skill Tree</h2>
+      <p id="skillPointsText">Skill Points: 0</p>
+      <div id="skillTree"></div>
+    </section>
+
+    <!-- PETS TAB -->
+    <section id="tab-pets" class="tab-content">
+      <h2>Companioni</h2>
+      <div id="petsGrid"></div>
+    </section>
+
+    <!-- PRESTIGE TAB -->
+    <section id="tab-prestige" class="tab-content">
+      <h2>Prestige</h2>
+      <p id="prestigeInfo"></p>
+      <button id="prestigeBtn">Prestige Now</button>
+    </section>
+
+    <!-- ZONES TAB -->
+    <section id="tab-zones" class="tab-content">
+      <h2>Zone</h2>
+      <div id="zonesGrid"></div>
+    </section>
+
+  </main>
+
+  <footer id="footer">
+    <button id="saveBtn">💾 Salvează</button>
+    <button id="resetBtn">🗑️ Reset Total</button>
+    <span id="saveStatus"></span>
+  </footer>
+
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/state.js"></script>
+<script src="js/character.js"></script>
+<script src="js/equipment.js"></script>
+<script src="js/combat.js"></script>
+<script src="js/pets.js"></script>
+<script src="js/prestige.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
